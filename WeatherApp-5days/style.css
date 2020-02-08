@@ -1,0 +1,164 @@
+* {
+   /* font-family: Arial, Helvetica, sans-serif;  */
+   font-family: 'Alex Brush';
+}
+body {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+
+   background-color: rgb(255, 255, 255);
+}
+
+.cart {
+   width: 90%;
+   height: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(287px, 1fr));
+   grid-column-gap: 0.5em;
+   grid-row-gap: 0.5em;
+   align-items: center;
+}
+.container {
+   width: 290px;
+   height: 400px;
+   background-color: rgb(255, 255, 255);
+   border: 1px solid;
+   border-radius: 5px;
+   margin: auto;
+   color: #293251;
+}
+.container:hover {
+   box-shadow: 0 0 55px rgba(0, 0, 0, 0.205);
+   transition: 0.3s ease-out;
+}
+.weather-container,
+.app-title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.app-title {
+   /* background-color: rgb(255, 255, 255); */
+   font-size: 25px;
+}
+.app-title p {
+   text-align: center;
+   padding: 25px;
+   margin: 0 auto;
+}
+.weather-icon {
+   margin: 1px 0 0 0;
+}
+.temperature-value {
+   width: 300px;
+   height: 60px;
+}
+
+.temperature-value p {
+   padding: 0;
+   margin: 0;
+
+   font-size: 3em;
+   text-align: center;
+   cursor: pointer;
+}
+
+.temperature-description p {
+   padding: 5px 0 15px;
+   margin: 0;
+
+   text-align: center;
+   font-size: 1.2em;
+}
+.wind-speed p {
+   padding: 0;
+   margin: 0;
+   text-align: center;
+   font-size: 1.2em;
+}
+
+.sunrise-and-sunset {
+   padding: 0;
+   margin: 10px;
+   text-align: center;
+   font-size: 1.3em;
+}
+.sunrise-and-sunset img {
+   width: 1.5em;
+}
+.location p {
+   padding: 0;
+   margin: 25px;
+   text-align: center;
+   font-size: 2em;
+   font-style: normal;
+}
+.location i {
+   font-size: 0.9em;
+}
+.loader-wrapper {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #ffffff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.loader {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   position: relative;
+   border: 4px solid rgb(3, 151, 209);
+   animation: loader 2s infinite ease;
+}
+.loader-inner {
+   vertical-align: top;
+   display: inline-block;
+   width: 100%;
+   background-color: rgb(3, 151, 209);
+   animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(180deg);
+   }
+   50% {
+      transform: rotate(180deg);
+   }
+   75% {
+      transform: rotate(360deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+@keyframes loader-inner {
+   0% {
+      height: 0%;
+   }
+   25% {
+      height: 0%;
+   }
+   50% {
+      height: 100%;
+   }
+   75% {
+      height: 100%;
+   }
+   100% {
+      height: 0%;
+   }
+}
+.footer {
+   flex-shrink: 0px;
+}
