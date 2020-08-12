@@ -2,7 +2,7 @@ const KELVIN = 273;
 const key = '5f88cc0ee2aac21d465d480c160abd04';
 
 async function fetchAPI(lat, lon) {
-   //const api = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${key}`;
+   // const api = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${key}`;
    const api = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}`;
    let response = await fetch(api);
    let result = await response.json();
@@ -33,7 +33,7 @@ function rendemWeatherData(data) {
          'Sep',
          'Oct',
          'Nov',
-         'Dec'
+         'Dec',
       ][mydate.getMonth()];
       const day = [
          'Sunday',
@@ -42,7 +42,7 @@ function rendemWeatherData(data) {
          'Wednesday',
          'Thursday',
          'Friday',
-         'Saturday'
+         'Saturday',
       ][mydate.getDay()];
       const str = `${mydate.getDate()}. ${month}`;
       console.log(str);
